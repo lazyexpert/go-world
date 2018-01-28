@@ -1,6 +1,6 @@
 # go-world
 ## Description
-Very simple random int generator
+Imagine the world with only two species: plants and zombies. They would simply fight each other to obtain living. So, this app is kind of simulation of such world.
 
 ## Dependencies
 All you need is:
@@ -10,22 +10,11 @@ All you need is:
 ## Build
 Simply do:
 ```
-make all
+make
 ```
 
 ## Usage
-There are two ways to generate random integer. 
-
-### First
-Simply pass maximum integer as a command line argument
+Run with command:
 ```
-./bin/rand 100
-```
-
-### Second
-You pass two arguments, bounding the desired value.
-Example: you want to generate number between 10 and 20.
-Usage:
-```
-./bin/rand 10 20
+./bin/world
 ```

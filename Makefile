@@ -3,4 +3,4 @@ all:
 clean: 
 	rm -rf bin
 compile: 
-	go build -o bin/world constants.go main.go
+	go build -o bin/world *.go

@@ -1,27 +1,17 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"os/exec"
-	"time"
-)
+func gameLoop(renderer *Renderer) {
+	go renderer.render()
 
-func clear() {
-	cmd := exec.Command("clear")
-	cmd.Stdout = os.Stdout
-	cmd.Run()
-}
-
-func gameLoop() {
 	for {
-		fmt.Printf("Game width: %d, game height: %d", worldWidth, worldHeight)
-		time.Sleep(500 * time.Millisecond)
-		clear()
+		// some calculations here
 	}
 }
 
 func main() {
-	fmt.Println("Starting app")
-	gameLoop()
+	world := &World{}
+	world.init()
+	println(world.board[5])
+	renderer := &Renderer{500, world}
+	gameLoop(renderer)
 }
