@@ -1,9 +1,11 @@
 package main
 
 type World struct {
-	width  int
-	height int
-	board  string
+	width               int
+	height              int
+	board               string
+	initialPlantsCount  int
+	initialZombiesCount int
 
 	plants  []*Plant
 	zombies []*Zombie
@@ -12,6 +14,8 @@ type World struct {
 func (world *World) init() {
 	world.width = 50
 	world.height = 25
+	world.initialPlantsCount = 5
+	world.initialZombiesCount = 5
 
 	world.initBoard()
 }
